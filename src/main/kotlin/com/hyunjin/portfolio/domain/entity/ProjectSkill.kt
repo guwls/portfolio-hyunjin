@@ -13,14 +13,14 @@ class ProjectSkill(
     @Column(name = "project_skill_id")
     var id: Long? = null
 
-    @ManyToMany(
+    @ManyToOne(
         targetEntity = Project::class,
         fetch = FetchType.LAZY
     )
     @JoinColumn(name = "project_id", nullable = false)
     var project: Project = project
 
-    @ManyToMany(
+    @ManyToOne(
         targetEntity = Skill::class,
         fetch = FetchType.LAZY
     )

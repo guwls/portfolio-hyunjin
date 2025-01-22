@@ -8,7 +8,7 @@ import java.time.LocalDate
 class Achievement(
     title: String,
     description: String,
-    achievement: LocalDate?,
+    achievedDate: LocalDate?,
     host: String,
     isActive: Boolean
     ) : BaseEntity() {
@@ -22,7 +22,7 @@ class Achievement(
 
     var description: String = description
 
-    var achievement: LocalDate? = achievement
+    var achievedDate: LocalDate? = achievedDate
 
     var host: String = host
 

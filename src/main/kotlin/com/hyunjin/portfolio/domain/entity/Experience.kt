@@ -8,8 +8,8 @@ class Experience(
     description: String,
     startYear: Int,
     startMonth: Int,
-    endYear: Int,
-    endMonth: Int,
+    endYear: Int?,
+    endMonth: Int?,
     isActive: Boolean
 ) : BaseEntity() {
 
@@ -26,9 +26,9 @@ class Experience(
 
     var startMonth: Int = startMonth
 
-    var endYear: Int = endYear
+    var endYear: Int? = endYear
 
-    var endMonth: Int = endMonth
+    var endMonth: Int? = endMonth
 
     var isActive: Boolean = isActive
 

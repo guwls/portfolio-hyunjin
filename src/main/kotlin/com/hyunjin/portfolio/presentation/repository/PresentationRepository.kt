@@ -12,24 +12,28 @@ class PresentationRepository(
     private val skillRepository: SkillRepository,
     private val projectRepository: ProjectRepository,
     private val experienceRepository: ExperienceRepository
-){
-    fun getActiveAchievements(): List<Achievement>{
+) {
+    fun getActiveAchievements(): List<Achievement> {
         return achievementRepository.findAllByIsActive(true)
     }
 
-    fun getActiveExperiences(): List<Experience>{
+    fun getActiveExperiences(): List<Experience> {
         return experienceRepository.findAllByIsActive(true)
     }
-    fun getActiveIntroductions(): List<Introduction>{
-        return introductionRepository.findAllByIsActive(true)
+
+    fun getActiveIntroductions(): List<Introduction> {
+        return introductionRepository.findAllByIsActive(true)//introductionRepo에 있는 isActive를 모두 조회
     }
-    fun getActiveLinks(): List<Link>{
+
+    fun getActiveLinks(): List<Link> {
         return linkRepository.findAllByIsActive(true)
     }
-    fun getActiveProjects(): List<Project>{
+
+    fun getActiveProjects(): List<Project> {
         return projectRepository.findAllByIsActive(true)
     }
-    fun getActiveSkills(): List<Skill>{
+
+    fun getActiveSkills(): List<Skill> {
         return skillRepository.findAllByIsActive(true)
     }
 }

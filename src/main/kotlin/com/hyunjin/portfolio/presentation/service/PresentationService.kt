@@ -11,23 +11,23 @@ import org.springframework.transaction.annotation.Transactional
 @Service
 class PresentationService(
     private val presentationRepository: PresentationRepository
-){
-    @Transactional(readOnly = true ) // 읽기전용(스냅샷을 뜨는 작업을 생략)
-    fun getIntroductions(): List<IntroductionDTO>{
+) {
+    @Transactional(readOnly = true) // 읽기전용(스냅샷을 뜨는 작업을 생략)
+    fun getIntroductions(): List<IntroductionDTO> {
         val introductions = presentationRepository.getActiveIntroductions()
 
-        return introductions.map { IntroductionDTO(it) }
+        return introductions.map { IntroductionDTO(it) } //introductions 리스트의 각 요소를 introductionDTO로 변환
     }
 
-    @Transactional(readOnly = true )
-    fun getLinks(): List<LinkDTO>{
+    @Transactional(readOnly = true)
+    fun getLinks(): List<LinkDTO> {
         val links = presentationRepository.getActiveLinks()
 
         return links.map { LinkDTO(it) }
     }
 
-    @Transactional(readOnly = true )
-    fun getResume(): ResumeDTO{
+    @Transactional(readOnly = true)
+    fun getResume(): ResumeDTO {
         val experiences = presentationRepository.getActiveExperiences()
         val achievements = presentationRepository.getActiveAchievements()
         val skills = presentationRepository.getActiveSkills()
@@ -39,8 +39,8 @@ class PresentationService(
         )
     }
 
-    @Transactional(readOnly = true )
-    fun getProjects(): List<ProjectDTO>{
+    @Transactional(readOnly = true)
+    fun getProjects(): List<ProjectDTO> {
         val projects = presentationRepository.getActiveProjects()
 
         return projects.map { ProjectDTO(it) }

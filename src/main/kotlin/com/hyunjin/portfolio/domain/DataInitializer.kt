@@ -42,22 +42,22 @@ class DataInitializer(
 
         // introduction 초기화
         val introductions = mutableListOf<Introduction>(
-            Introduction(content = "주도적으로 문제를 찾고, 해결하는 고양이입니다.", isActive = true),
-            Introduction(content = "기술을 위한 기술이 아닌, 비즈니스 문제를 풀기 위한 기술을 추구합니다.", isActive = true),
-            Introduction(content = "기존 소스를 리팩토링하여 더 좋은 구조로 개선하는 작업을 좋아합니다.", isActive = true)
+            Introduction(content = "호불호가 확실한 개발자입니다.", isActive = true),
+            Introduction(content = "사용자를 더욱 편리하고 즐겁게 만들기 위해 항상 고민합니다.", isActive = true),
+            Introduction(content = "새로운 기능을 개발하고 기존 소스의 좋은 구조를 고민하는 작업을 좋아합니다.", isActive = true)
         )
         introductionRepository.saveAll(introductions)
 
         // link 초기화
         val links = mutableListOf<Link>(
-            Link(name = "Github", content = "https://github.com/infomuscle", isActive = true),
+            Link(name = "Github", content = "https://github.com/guwls", isActive = true),
             Link(name = "Linkedin", content = "https://www.linkedin.com/in/bokeunjeong",
                 isActive = true),
         )
         linkRepository.saveAll(links)
 
         val experience1 = Experience(
-            title = "캣홀릭대학교(CatHolic Univ.)", description = "컴퓨터공학 전공", startYear = 2018,
+            title = "호서대학교", description = "컴퓨터공학 전공", startYear = 2018,
             startMonth = 9,
             endYear = 2022,
             endMonth = 8,
